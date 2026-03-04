@@ -1,0 +1,295 @@
+/* Variáveis de Cores - Paleta Náutica e Luxuosa */
+:root {
+    --primary: #003049; /* Azul Marinho Náutico */
+    --secondary: #d62828; /* Vermelho Bóia / Detalhe Clássico */
+    --accent: #eae2b7; /* Bege Areia / Deck de Madeira */
+    --text: #4a4a4a;
+    --white: #ffffff;
+    --bg-ocean: #001d2d;
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.01em;
+}
+
+.text-white { color: var(--white); }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul { list-style: none; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section { padding: 100px 0; }
+.bg-ocean { background-color: var(--bg-ocean); }
+.text-center { text-align: center; }
+.mb-50 { margin-bottom: 50px; }
+.mt-30 { margin-top: 30px; }
+.mb-15 { margin-bottom: 15px; }
+
+.jet-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    font-weight: 600;
+    color: var(--primary);
+}
+.jet-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+}
+
+.subtitle {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 18px 45px;
+    border-radius: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.btn-full { width: 100%; }
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 0;
+    transition: var(--transition);
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo span { color: var(--secondary); font-size: 0.9rem; display: block; letter-spacing: 5px; text-transform: uppercase; margin-top: -5px; }
+
+.nav-links { display: flex; }
+.nav-links li { margin-left: 40px; }
+.nav-links a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover { color: var(--secondary); }
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content { width: 100%; }
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--white);
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 45px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* Grids */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Yacht Features */
+.yacht-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.feature strong { display: block; font-size: 1.2rem; color: var(--primary); margin-bottom: 5px; }
+
+/* Yacht Cards */
+.yacht-card {
+    background: var(--white);
+    border-radius: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.yacht-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.yacht-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-info { padding: 25px; text-align: center; }
+.card-info h3 { margin-bottom: 10px; font-size: 1.4rem; }
+.card-info p { font-size: 0.9rem; color: #777; }
+
+/* Formulário */
+.yacht-form input, 
+.yacht-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    background: #fdfdfd;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.yacht-form input:focus { border-color: var(--primary); }
+
+/* Footer */
+footer {
+    background: #001524;
+    color: #666;
+    padding: 80px 0 30px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #00253e;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-links a { margin-left: 30px; font-size: 0.85rem; }
+
+.copyright { font-size: 0.8rem; }
+
+/* Mobile Menu Icon */
+.mobile-menu-icon { display: none; cursor: pointer; }
+.mobile-menu-icon div {
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 7px;
+    transition: var(--transition);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .hero-content h1 { font-size: 2.8rem; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 50px; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+    }
+
+    .nav-links li { margin: 20px 0; }
+    .mobile-menu-icon { display: block; }
+    .nav-active { transform: translateX(0); }
+    .footer-grid { flex-direction: column; text-align: center; }
+    .footer-links { margin-top: 30px; }
+}
