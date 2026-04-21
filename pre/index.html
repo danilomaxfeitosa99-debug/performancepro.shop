@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Čo sa stane v mozgu, keď ráno nalačno zjete med?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:#0b0b0b;color:#ccc;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+/* HERO */
+.hero{position:relative;width:100%;max-height:380px;overflow:hidden}
+.hero img{width:100%;height:380px;object-fit:cover;cursor:pointer}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(transparent 15%,#0b0b0b 95%)}
+
+/* CONTAINER */
+.w{max-width:620px;margin:0 auto;padding:0 18px}
+
+/* HEADLINE */
+.hl{padding:10px 0 6px;text-align:center}
+.hl .cat{display:inline-block;font-size:8px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#c8a84c;background:rgba(200,168,76,.08);padding:4px 14px;border-radius:3px;border:1px solid rgba(200,168,76,.15);margin-bottom:8px}
+.hl h1{font-family:'Playfair Display',serif;font-size:23px;line-height:1.3;color:#fff}
+.hl h1 em{color:#c8a84c;font-style:normal}
+.hl .lead{font-size:13px;color:#888;font-weight:300;margin-top:5px;line-height:1.6}
+
+/* CTA TOP */
+.cta-main{margin:14px 0;padding:20px;background:linear-gradient(135deg,#c8a84c,#9a7a28);border-radius:10px;text-align:center;box-shadow:0 8px 35px rgba(200,168,76,.15)}
+.cta-main h2{font-family:'Playfair Display',serif;font-size:16px;color:#0b0b0b;font-weight:400;margin-bottom:3px;line-height:1.35}
+.cta-main p{font-size:11px;color:rgba(10,10,10,.5);margin-bottom:10px;font-weight:300}
+.btn-main{display:inline-block;background:#0b0b0b;color:#c8a84c;padding:13px 44px;font-size:14px;font-weight:600;text-decoration:none;border-radius:6px;transition:all .25s;box-shadow:0 4px 16px rgba(0,0,0,.4);letter-spacing:.3px}
+.btn-main:hover{background:#fff;color:#0b0b0b;transform:translateY(-2px)}
+.cta-main small{display:block;margin-top:5px;font-size:7.5px;color:rgba(10,10,10,.28)}
+
+/* TEXT BLOCKS */
+.tx{padding:10px 0}
+.tx p{font-size:14px;color:#bbb;font-weight:300;line-height:1.85;margin-bottom:11px}
+.tx strong{color:#fff;font-weight:500}
+.tx em{color:#c8a84c;font-style:normal;font-weight:400}
+
+/* QUESTION BLOCK */
+.qblock{text-align:center;padding:6px 0;margin:4px 0}
+.qblock h3{font-family:'Playfair Display',serif;font-size:18px;color:#fff;font-weight:400;line-height:1.35}
+.qblock h3 em{color:#c8a84c;font-style:normal}
+
+/* IMAGE + TESTIMONIAL */
+.img-card{margin:14px 0;border-radius:8px;overflow:hidden;position:relative}
+.img-card img{width:100%;cursor:pointer;transition:transform .3s}.img-card img:hover{transform:scale(1.02)}
+.img-card .ov{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(transparent,rgba(0,0,0,.88) 35%)}
+.img-card .qt{font-family:'Playfair Display',serif;font-size:13.5px;color:#eee;font-style:italic;line-height:1.55;margin-bottom:3px}
+.img-card .nm{font-size:9.5px;color:#c8a84c;font-weight:500}
+
+/* REVEAL LIST */
+.rl{margin:14px 0;background:#111;border-radius:8px;overflow:hidden;border:1px solid #1e1e1e}
+.rl-title{padding:11px 16px;font-family:'Playfair Display',serif;font-size:13.5px;color:#c8a84c;border-bottom:1px solid #1e1e1e}
+.rl-item{padding:9px 16px;border-bottom:1px solid #181818;display:flex;gap:10px;align-items:flex-start}
+.rl-item:last-child{border-bottom:none}
+.rl-dot{color:#c8a84c;font-size:12px;flex-shrink:0;margin-top:2px}
+.rl-txt{font-size:12.5px;color:#bbb;font-weight:300;line-height:1.55}
+.rl-txt strong{color:#fff;font-weight:500}
+
+/* HIGHLIGHT BOX */
+.hbox{margin:14px 0;padding:14px 16px;border-left:3px solid #c8a84c;background:#111;border-radius:0 6px 6px 0}
+.hbox p{font-family:'Playfair Display',serif;font-size:13.5px;color:#ddd;font-style:italic;line-height:1.6}
+
+/* CTA BOTTOM */
+.cta-end{margin:14px 0;padding:18px;background:#111;border-radius:8px;text-align:center;border:1px solid #c8a84c}
+.cta-end h3{font-family:'Playfair Display',serif;font-size:15px;color:#fff;margin-bottom:3px;font-weight:400}
+.cta-end p{font-size:10.5px;color:#777;margin-bottom:10px;font-weight:300}
+.cta-end .btn-main{background:#c8a84c;color:#0b0b0b}
+.cta-end .btn-main:hover{background:#fff;color:#0b0b0b}
+.cta-end small{display:block;margin-top:5px;font-size:7.5px;color:#555}
+
+/* DISCLAIMER */
+.disc{font-size:8px;color:#555;margin:14px 0;padding:10px 12px;background:#0d0d0d;border-radius:4px;line-height:1.6;border:1px solid #181818}
+
+/* FOOTER */
+footer{padding:14px 18px 28px;text-align:center;font-size:8px;color:#444}
+footer a{color:#c8a84c;text-decoration:none}footer a:hover{text-decoration:underline}
+
+@media(max-width:600px){
+.hl h1{font-size:19px}
+.qblock h3{font-size:16px}
+.cta-main h2{font-size:14px}
+.hero img{height:280px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<a href="https://lp.performancepro.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem_slovakia-honey-dark-tatras-Pap5dSxVuvEo4HpTYynYtB.webp" alt="Lipový med v tradičnej slovenskej miske"></a>
+<div class="hero-ov"></div>
+</section>
+
+<div class="w">
+
+<!-- HEADLINE -->
+<div class="hl">
+<span class="cat">Zdravie &middot; Pamäť &middot; 2026</span>
+<h1>Čo sa stane v mozgu, keď ráno nalačno <em>zjete lyžicu medu?</em></h1>
+<p class="lead">Príbeh jedného páru z Vysokých Tatier, ktorý sa šíri po celom Slovensku.</p>
+</div>
+
+<!-- CTA TOP -->
+<div class="cta-main">
+<h2>&#9654; Pozrite si video, ktoré vysvetľuje všetko</h2>
+<p>Ako med pôsobí na pamäť — a prečo sa musí konzumovať práve takto</p>
+<a href="https://lp.performancepro.shop/preclick" class="btn-main">Pozrieť video &rarr;</a>
+<small>Bezplatný informačný obsah · 3 minúty</small>
+</div>
+
+<!-- TEXT -->
+<div class="tx">
+<p>Predstavte si, že vojdete do kuchyne a <strong>neviete si spomenúť, prečo ste tam prišli.</strong> Stretnete starého priateľa a <strong>nedokážete si vybaviť jeho meno.</strong> Odložíte okuliare a <strong>po piatich minútach neviete, kam ste ich dali.</strong></p>
+
+<p>Väčšina ľudí si povie: <strong>„To je vek, s tým sa nedá nič robiť."</strong></p>
+
+<p>Ale čo ak <em>to nie je celá pravda?</em></p>
+</div>
+
+<!-- QUESTION -->
+<div class="qblock">
+<h3>Čo ak zhoršovanie pamäti <em>nezávisí len od veku?</em></h3>
+</div>
+
+<!-- TEXT -->
+<div class="tx">
+<p>Jeden <strong>pár z Vysokých Tatier</strong> urobil prekvapivý objav. Jemu je 67, jej 64 — a obaja si všimli, že ich pamäť <strong>sa zhoršuje z mesiaca na mesiac.</strong></p>
+
+<p>Potom im <strong>starý včelár z dediny</strong> porozprával o starom recepte — <em>zmesi medu</em>, ktorú <strong>slovenské babičky</strong> pripravujú každé ráno už celé generácie.</p>
+
+<p>Neverili tomu. Ale <strong>vyskúšali to.</strong> A to, čo sa stalo potom — <em>na to neboli pripravení.</em></p>
+</div>
+
+<!-- QUESTION -->
+<div class="qblock">
+<h3>Ale prečo práve <em>med?</em><br>A prečo nestačí <em>jesť ho samotný?</em></h3>
+</div>
+
+<!-- TEXT -->
+<div class="tx">
+<p>Tajomstvo nie je v samotnom mede. Ale v tom, <strong>ako</strong> a <strong>s čím</strong> ho skombinujete. Samotný med je len sladidlo. Ale keď ho zmiešate s <em>týmito štyrmi ďalšími prísadami</em> — a skonzumujete ho <strong>ráno, nalačno</strong> — <em>v mozgu sa stane niečo úplne iné.</em></p>
+
+<p><strong>Slovenskí včelári</strong> to vedia už celé storočia. Ale až teraz, keď to <strong>odborníci preskúmali</strong> — pochopili, <em>prečo to funguje.</em></p>
+</div>
+
+<!-- IMAGE + TESTIMONIAL -->
+<div class="img-card">
+<a href="https://lp.performancepro.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem_slovakia-elderly-couple-tatras-9EihZguDNtmZ3ARBMcciyS.webp" alt="Slovenský pár pri Vysokých Tatrách"></a>
+<div class="ov">
+<p class="qt">„Tri mesiace to robíme každé ráno. Predtým som stále hľadal kľúče — teraz si presne pamätám, kam som ich dal. Manželka hovorí: ‚Konečne si pamätáš aj naše výročie.'"</p>
+<p class="nm">— Ján a Mária Kováčovci, 67 a 64 rokov, Poprad (Vysoké Tatry)</p>
+</div>
+</div>
+
+<!-- REVEAL LIST -->
+<div class="rl">
+<div class="rl-title">Čo sa dozviete vo videu:</div>
+<div class="rl-item">
+<span class="rl-dot">&#9670;</span>
+<div class="rl-txt">Aká je <strong>„skrytá látka"</strong> v mede, ktorá podľa výskumníkov <strong>priamo pôsobí na komunikáciu medzi mozgovými bunkami</strong></div>
+</div>
+<div class="rl-item">
+<span class="rl-dot">&#9670;</span>
+<div class="rl-txt"><strong>4 ďalšie prísady</strong>, ktoré „aktivujú" účinok medu — a <strong>nájdete ich v každej slovenskej kuchyni</strong></div>
+</div>
+<div class="rl-item">
+<span class="rl-dot">&#9670;</span>
+<div class="rl-txt">Prečo <strong>to nefunguje</strong>, ak med dáte do horúceho čaju — a aký je <strong>jediný správny spôsob</strong></div>
+</div>
+<div class="rl-item">
+<span class="rl-dot">&#9670;</span>
+<div class="rl-txt">Prečo <strong>ráno nalačno</strong> je najúčinnejší čas — a čo hovoria <strong>tatranský včelári</strong></div>
+</div>
+</div>
+
+<!-- HIGHLIGHT BOX -->
+<div class="hbox">
+<p>„Tajomstvo nie je v samotnom mede. Ale v tom, čo sa stane, keď ho skonzumujete so správnymi prísadami, v správnom čase. Väčšina ľudí to nevie."</p>
+</div>
+
+<!-- CTA BOTTOM -->
+<div class="cta-end">
+<h3>Objavte kompletný recept — krok za krokom</h3>
+<p>Presné prísady · Správne pomery · Ideálny čas</p>
+<a href="https://lp.performancepro.shop/preclick" class="btn-main">Pozrieť video &rarr;</a>
+<small>Bezplatný informačný obsah</small>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disc">
+<strong>Právne upozornenie:</strong> Tento článok má výlučne informačný charakter a nepredstavuje lekárske poradenstvo. Výživové doplnky nenahradzujú pestrú stravu a zdravý životný štýl. Výsledky sa môžu líšiť v závislosti od jednotlivca. Pred akoukoľvek zmenou stravy sa poraďte so svojím lekárom. Názory vyjadrené v článku odrážajú osobné skúsenosti čitateľov.
+</div>
+
+</div>
+
+<footer>
+<p><a href="privacy.html">Ochrana osobných údajov</a> &middot; <a href="terms.html">Podmienky používania</a></p>
+<p style="margin-top:3px">© <script>document.write(new Date().getFullYear())</script> &middot; CNPJ: 65.067.018/0001-56</p>
+</footer>
+
+<script>
+(function(){var q=window.location.search;if(!q)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:'))return;a.setAttribute('href',h.includes('?')?h+'&'+q.substring(1):h+q)})})();
+</script>
+<script type="text/javascript" src="https://lp.performancepro.shop/pretrack.js?rtkcmpid=69e7acd612c8b4aac4927390"></script>
+</body>
+</html>
